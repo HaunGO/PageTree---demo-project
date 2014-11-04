@@ -9,6 +9,9 @@
     <!-- Bootstrap -->
     <link href="stylesheets/styles.css" rel="stylesheet">
 
+    <!-- Modernizr -->
+    <script src="eyeball/min/modernizr-2.8.3.min.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -199,6 +202,10 @@
           </div>
 
         </div>
+        
+        <!-- EYEBALL -->
+        <a href="http://brandonhaun.com" target="_blank"><div id="EYEBALL" data-eye-size="100" data-eye-color="#b2d30b"></div></a>
+
       </div>
 
 
@@ -231,6 +238,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="javascripts/bootstrap.js"></script>
+
+
+    <!-- Parallax.js -->
+    <script src="eyeball/min/jquery.parallax.min.js"></script>
+    <!-- EYEBALL -->
+    <script src="eyeball/min/eyeball-min.js"></script>
+
+    <script>
+      $(function() {
+        $('#EYEBALL').EyeBall();
+      });
+    </script>
+
   </body>
 </html>
 

@@ -1,0 +1,60 @@
+/* line 26, eyeball.scss */
+.EYEBALL {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 33, eyeball.scss */
+.eyeball {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  position: relative;
+  display: inline-block;
+}
+/* line 41, eyeball.scss */
+.eyeball .pupil {
+  background-color: #222;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 55, eyeball.scss */
+.eyeball .iris {
+  background-color: #00bff3;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 69, eyeball.scss */
+.eyeball .ball {
+  background-color: #f5f0d8;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #c7594e;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=eyeball.css.map */

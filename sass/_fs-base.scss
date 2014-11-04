@@ -284,6 +284,7 @@ hr {
 .footer1 {
   background-color:$fs-gray1;
   color:$fs-white;
+  position:relative;
 
 
 // AWESOME BREAKPOINT TECHNIQUE:
@@ -332,7 +333,9 @@ hr {
   background-color:$fs-gray2;
   color:#acb4b6;
   font-size:0.9em;
-  
+
+  padding-top:50px;
+
   p{
     position:relative;
     max-width:500px;

@@ -2,6 +2,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400");
+@import url(../eyeball/eyeball.css);
 /* line 9, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.0.1/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8551,6 +8552,7 @@ hr {
 .footer1 {
   background-color: #656565;
   color: #ffffff;
+  position: relative;
 }
 @media screen and (max-width: 699px) {
   /* line 284, ../sass/_fs-base.scss */
@@ -8570,7 +8572,7 @@ hr {
     text-align: left;
   }
 }
-/* line 305, ../sass/_fs-base.scss */
+/* line 306, ../sass/_fs-base.scss */
 .footer1 ul {
   margin: 0.75em 0;
   padding: 0 1em;
@@ -8578,7 +8580,7 @@ hr {
   color: #acb4b6;
   font-size: 0.9em;
 }
-/* line 314, ../sass/_fs-base.scss */
+/* line 315, ../sass/_fs-base.scss */
 .footer1 li:before {
   content: "";
   border-color: transparent #b2d30b;
@@ -8592,25 +8594,26 @@ hr {
   position: relative;
 }
 
-/* line 330, ../sass/_fs-base.scss */
+/* line 331, ../sass/_fs-base.scss */
 .footer2 {
   text-align: center;
   background-color: #414049;
   color: #acb4b6;
   font-size: 0.9em;
+  padding-top: 50px;
 }
-/* line 336, ../sass/_fs-base.scss */
+/* line 339, ../sass/_fs-base.scss */
 .footer2 p {
   position: relative;
   max-width: 500px;
   margin: auto;
 }
-/* line 342, ../sass/_fs-base.scss */
+/* line 345, ../sass/_fs-base.scss */
 .footer2 img {
   margin: 20px;
 }
 
-/* line 349, ../sass/_fs-base.scss */
+/* line 352, ../sass/_fs-base.scss */
 .btn-social {
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -8622,12 +8625,12 @@ hr {
   border: 1px solid #b2d30b;
   background-color: transparent;
 }
-/* line 358, ../sass/_fs-base.scss */
+/* line 361, ../sass/_fs-base.scss */
 .btn-social i {
   color: #ffffff;
 }
 
-/* line 364, ../sass/_fs-base.scss */
+/* line 367, ../sass/_fs-base.scss */
 .btn-social:hover {
   background-color: #b2d30b;
   border: 1px solid #656565;
@@ -8781,4 +8784,11 @@ hr {
   border-radius: 0px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
+}
+
+/* line 30, ../sass/styles.scss */
+#EYEBALL {
+  position: absolute;
+  bottom: -30px;
+  right: 10%;
 }
