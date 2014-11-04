@@ -1,0 +1,403 @@
+
+
+
+
+
+
+html, body{
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+hr {
+  border-top:1px dotted $fs-gray1;
+  color:#fff;
+  height:1px;
+
+}
+
+.panel {
+  background-color:$fs-gray3;
+  border:0;
+
+}
+
+.stripe {
+  width:100%;
+  height:10px;
+  background: repeating-linear-gradient(to right, $fs-green, $fs-green 10%, $fs-gray1 10%, $fs-gray1 20%);
+}
+
+.row {
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  padding:2em 0;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+/* ___________________________________________________________________________________________ */
+
+#page-header {
+  position: relative;
+  // height:40%;
+  height:500px;
+
+  @include bgImgCover-mixin("../images/site/header-full.jpg");
+
+  margin:0px auto;
+}
+
+#promo {
+  width:460px;
+  position:absolute; right:10%; top:30%;
+  padding:100px 10px 10px;
+  color:white;
+  text-align: center;
+  border-bottom:2px solid white;
+
+
+  @include alpha-attribute-mixin('background-color', rgba($fs-gray1, 0.67), white);
+  @include border-radius(5px);
+  
+
+  h2{
+    @include text-shadow-mixin(1px, 1px, 2px, rgba(0,0,0,0.4));
+    text-transform: uppercase;
+  }
+
+  > img {
+    position:absolute; left:30%; top:-80px;
+  }
+
+
+
+ 
+
+  @include breakpoint($xs) {
+      position:absolute; left:5%; top:30%;
+      width:90%;
+
+  }
+
+
+}
+
+
+
+
+
+
+/* ___________________________________________________________________________________________ */
+
+#section1 {
+  background-color:$fs-green;
+  color:$fs-white;
+  text-align: center;
+  padding:1em 0;
+  margin:0;
+
+  font-size: 1.2em;
+
+  h2{
+    @include text-shadow-mixin(1px, 1px, 2px, rgba(0,0,0,0.4));
+  }
+
+  .btn {
+    margin:1em 0;
+  }
+
+}
+ 
+
+
+
+
+
+
+
+
+/* ___________________________________________________________________________________________ */
+
+#section2 {
+  background-color:$fs-cream;
+  text-align: center;
+
+
+  p{
+    color: #777;
+    font-size: 0.8em;
+  }
+}
+
+.mission-statement{
+  background-image:url("../images/site/bg-logo-shape.png") ;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: 95% 100%; 
+
+
+// width: 350px;
+// margin:0 5px;
+  padding:5px 10px;
+  background-color:$fs-gray3;
+  @include border-radius(5px);
+
+}
+
+.fb-container {
+  // width: 330px;
+  // margin:0 5px;
+  text-align: left;
+  
+
+  background-color:$fs-gray3;
+  @include border-radius(5px);
+
+
+  h4{
+    background-color: $facebook-blue;
+    color:white;
+    width:100%; 
+    // height:50px;
+    padding:10px;
+    margin:0px;
+    text-transform: none;
+    @include border-top-radius(5px);
+  }
+
+}
+
+.fb-block{
+  position:relative;
+  // display:block;
+  // border:1px solid red; 
+  clear:both;
+  padding:0.5em;
+  
+  img:first-child{
+    position:absolute; top:5px; left:5px;
+    // float:left;
+    // margin:0.5em;
+  }
+  img:last-child{
+    position:relative; left:50px;;
+  }
+  p{
+    position:relative; left:50px; width:80%;
+    // float:right;
+    // text-align: left;
+    // margin-left:10px;
+  }
+
+}
+
+
+// VIDEO PLAYER & HOLDER:
+// .vid-holder,
+.vid-holder iframe {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  margin-bottom:20px;
+  height: 100%;     
+
+  @include border-radius(5px);
+
+  @include breakpoint($xs) {
+    width: 100%;
+    height:300px;
+  }
+  @include breakpoint($sm) {
+    width: 100%;
+    height:300px;
+  }
+  @include breakpoint($md) {
+    width: 100%;
+    height: 100%;     
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ___________________________________________________________________________________________ */
+
+#section3 {
+  
+  // padding-top:50px;
+
+  background-color:$fs-white;
+  text-align:center;
+ 
+  @include breakpoint($md) {
+    text-align:left;
+  }
+
+  p{
+    width: 75%;
+    margin:0 auto 20px auto;
+
+    // AWESOME BREAKPOINT TECHNIQUE:
+    @include breakpoint($xs) { }
+    @include breakpoint($sm) {
+      text-align:center;
+    }
+    @include breakpoint($md) {
+      float:right;
+      text-align:left;
+    }
+  }
+  
+
+
+  .map {
+    float:right;
+  }
+
+  position:relative;
+
+  // border:1px solid red;
+  
+  .v-align{
+    padding:70px 0;
+    // @include vertical-align-mixin;
+    // border:1px solid red;
+  }
+
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________________________________________________________ */
+
+
+.footer1 {
+  background-color:$fs-gray1;
+  color:$fs-white;
+
+
+// AWESOME BREAKPOINT TECHNIQUE:
+  @include breakpoint($xs) {
+    text-align:center;
+  }
+  @include breakpoint($sm) {
+    text-align:center;
+  }
+  @include breakpoint($md) {
+    text-align:left;
+  }
+
+
+
+
+
+
+  ul {
+      margin: 0.75em 0;
+      padding: 0 1em;
+      list-style: none;
+      color:#acb4b6;
+      font-size:0.9em;
+  }
+
+// ADDS TRIANGLE BULLET:
+  li:before { 
+      content: "";
+      border-color: transparent $fs-green;
+      border-style: solid;
+      border-width: 0.35em 0 0.35em 0.45em;
+      display: block;
+      height: 0;
+      width: 0;
+      left: -1em;
+      top: 0.9em;
+      position: relative;
+  }
+
+
+}
+
+.footer2 {
+  text-align: center;
+  background-color:$fs-gray2;
+  color:#acb4b6;
+  font-size:0.9em;
+  
+  p{
+    position:relative;
+    max-width:500px;
+    margin:auto;
+  }
+
+  img{
+    margin:20px;
+  }
+
+}
+
+
+.btn-social{
+  @include border-radius(50%);
+  height:40px;
+  width:40px;
+  padding:10px;
+  border:1px solid $fs-green;
+  
+  background-color:transparent;
+
+  i{
+    color:$fs-white;
+  }
+
+}
+
+.btn-social:hover {
+  background-color:$fs-green;
+  border:1px solid $fs-gray1;
+}
+
+
+
+
+
+
+
+
+
+

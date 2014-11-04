@@ -1,0 +1,145 @@
+
+
+.navbar-toggle{
+	background-color: $fs-gray1;
+
+	.icon-bar {
+		background-color:$fs-white;
+	}
+}
+
+.navbar-nav
+{
+    margin-top:30px;
+}
+
+.navbar{
+	min-height:110px;
+}
+
+.navbar-header {
+	min-width: 260px;
+}
+
+
+.navbar > .container .navbar-brand, 
+.navbar > .container-fluid .navbar-brand{
+	position:relative;
+	height: 95px; width:260px;
+	margin:5px;
+
+	// AWESOME BREAKPOINT TECHNIQUE:
+	@include breakpoint($xs) {
+		margin-left: 0;
+	}
+	@include breakpoint($sm) {
+		margin-left: 200px;
+	}
+	@include breakpoint($md) {
+		margin-left: 0
+	}
+
+}
+
+
+
+
+
+
+
+#navbar .navbar-nav li a:link,
+#navbar .navbar-nav li a:active,{
+    text-transform: uppercase;
+    @include border-radius(30px);
+} 
+
+#navbar .navbar-nav li a:hover, 
+#navbar .navbar-nav li a:focus {
+    background-color: $fs-green;
+    color: $fs-white;
+}
+
+
+
+
+// ADDS TRIANGLE BULLET POINT
+.navbar-nav .dropdown-menu:before{
+	content: "";
+	border-color: transparent $fs-green;
+	border-style: solid;
+	border-width: 1em 0 1em 1em;
+
+	@include rotate-mixin(-90deg);
+
+	// AWESOME BREAKPOINT TECHNIQUE:
+	@include breakpoint($sm) {
+		position:absolute; top:-1.5em; left:45%;
+	}
+
+	// AWESOME BREAKPOINT TECHNIQUE:
+	@include breakpoint($xs) {
+	  position:absolute; top:35px; left:45%;
+	}
+
+} 
+
+
+#navbar .dropdown-menu{
+  
+	@include border-radius(5px);
+
+	background-color: $fs-green;
+	margin-top:15px;
+
+
+	// ADDS TRIANGLE BULLET POINT
+	li:before { 
+	  content: "";
+	  border-color: transparent $fs-white;
+	  border-style: solid;
+	  border-width: 0.35em 0 0.35em 0.45em;
+	  display: block;
+	  height: 0;
+	  width: 0;
+	  left: 35px;
+	  top: 23px;
+	  position: relative;
+	}
+
+	li a{
+		color: $fs-white;
+	}
+	
+
+	li a:link,
+	li a:active {
+	@include border-radius(0px);
+		padding:10px 50px;
+		color: $fs-white;
+		text-transform:capitalize;
+	}
+
+
+	li a:hover,
+	li a:focus {
+		background-color: $fs-gray1;
+		@include border-radius(0px);
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,165 @@
+/* _mixins.scss */
+
+/* Box Models */
+@mixin box-mixin {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+
+/* Forms Elements */
+@mixin placeholder-mixin {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@include placeholder-mixin {
+    color: $cement; 
+    font-weight: 200;
+}
+
+@mixin input-mixin ($border:1px solid $stone, $radius:4px, $padding:0.5em, $color: $stone, $font: 'arial' ) {
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    color: $color; 
+    font-family: $font;
+}
+
+@mixin placeholder-error-mixin {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+/* Transitions and Transforms */
+@mixin transition-mixin ($property:all,$duration:1.0s,$timing:linear,$delay:0s) {
+    -moz-transition: $property $duration $timing $delay;
+    -o-transition: $property $duration $timing $delay;
+    -webkit-transition: $property $duration $timing $delay;
+    transition: $property $duration $timing $delay;
+}
+
+/* example transform/transition */
+    /* transform 
+    @include transform-mixin(translateY(-100%));   
+    /* transform transition 
+    @include transform-transition-mixin(0.3s ease-in-out);
+*/
+
+@mixin transform-mixin ($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform; 
+}
+
+@mixin transform-transition-mixin ($transition-transform) {
+    -moz-transition: -moz-transform $transition-transform;
+    -o-transition: -o-transform $transition-transform;
+    -webkit-transition: -webkit-transform $transition-transform;
+    transition: transform $transition-transform;
+}
+
+@mixin transform-rotate-mixin ($degree: 90deg) { 
+    $rotate: rotate($degree);
+    -ms-transform: $rotate; 
+    -moz-transform: $rotate; 
+    -webkit-transform: $rotate; 
+    -o-transform: $rotate; 
+    transform: $rotate;
+}
+
+/* Animation */
+@mixin animation ($delay, $duration, $animation, $repeat) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-iteration-count: $repeat;
+ 
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-iteration-count: $repeat;
+ 
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-iteration-count: $repeat;
+ 
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-animation-iteration-count: $repeat;
+}
+
+@mixin keyframe ($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+ 
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+ 
+    @-o-keyframes $animation-name {
+        @content;
+    }
+ 
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+/* Box Decoration */
+@mixin round-mixin($topleft:10px,$topright:10px,$bottomleft:10px,$bottomright:10px) { 
+    -moz-border-radius: $topleft $topright $bottomleft $bottomright;
+    -webkit-border-radius: $topleft $topright $bottomleft $bottomright; 
+    border-radius: $topleft $topright $bottomleft $bottomright;
+}
+
+@mixin box-shadow-mixin($hshadow:1px, $vshadow:0, $blur:3px, $spread:0, $color:#000) {
+    -moz-box-shadow: $hshadow $vshadow $blur $spread $color;
+    -webkit-box-shadow: $hshadow $vshadow $blur $spread $color;
+    box-shadow: $hshadow $vshadow $blur $spread $color;
+}
+
+@mixin box-shadow-inset-mixin($inset, $hshadow:0, $vshadow:0, $blur: 3px, $spread:2px, $color:#888) { 
+    -moz-box-shadow: $inset $hshadow $vshadow $blur $spread $color;
+    -webkit-box-shadow: $inset $hshadow $vshadow $blur $spread $color;
+    box-shadow: $inset $hshadow $vshadow $blur $spread $color;
+}
+
+/* Shapes */
+@mixin circle-mixin($height:60px, $width:60px, $radius:30px, $background:#000) {
+    display: block;
+    height: $height;
+    width: $width;
+    @include round-mixin($radius,$radius,$radius,$radius);
+    background: $background;
+}
+
+/* Fancy Borders */
+@mixin border-image-mixin($imgPath, $top:0, $right:0, $bottom:3, $left:0, $treat1:round, $treat2:round ) {
+    border-width: 0 0 3px 0;
+    -moz-border-image: $imgPath $top $right $bottom $left $treat1 $treat2;
+    -webkit-border-image: $imgPath $top $right $bottom $left $treat1 $treat2;
+    border-image: $imgPath $top $left $bottom $left $treat1 $treat2;
+}
+
+/* Gradients */
+@mixin gradient-mixin() {
+    background: rgb(249,249,249); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmUxZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(249,249,249,1) 0%, rgba(239,225,225,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,249,249,1)), color-stop(100%,rgba(239,225,225,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(239,225,225,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(239,225,225,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(239,225,225,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(249,249,249,1) 0%,rgba(239,225,225,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#efe1e1',GradientType=0 ); /* IE6-8 */
+}
