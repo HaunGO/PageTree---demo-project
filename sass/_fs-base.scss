@@ -146,12 +146,8 @@ hr {
 .mission-statement{
   background-image:url("../images/site/bg-logo-shape.png") ;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
   background-position: 95% 100%; 
 
-
-// width: 350px;
-// margin:0 5px;
   padding:5px 10px;
   background-color:$fs-gray3;
   @include border-radius(5px);
@@ -159,20 +155,14 @@ hr {
 }
 
 .fb-container {
-  // width: 330px;
-  // margin:0 5px;
-  text-align: left;
-  
-
+  text-align:left;
   background-color:$fs-gray3;
   @include border-radius(5px);
-
 
   h4{
     background-color: $facebook-blue;
     color:white;
     width:100%; 
-    // height:50px;
     padding:10px;
     margin:0px;
     text-transform: none;
@@ -183,35 +173,24 @@ hr {
 
 .fb-block{
   position:relative;
-  // display:block;
-  // border:1px solid red; 
   clear:both;
   padding:0.5em;
   
   img:first-child{
     position:absolute; top:5px; left:5px;
-    // float:left;
-    // margin:0.5em;
   }
   img:last-child{
     position:relative; left:50px;;
   }
   p{
     position:relative; left:50px; width:80%;
-    // float:right;
-    // text-align: left;
-    // margin-left:10px;
   }
 
 }
 
 
 // VIDEO PLAYER & HOLDER:
-// .vid-holder,
 .vid-holder iframe {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   margin-bottom:20px;
   height: 100%;     
 
@@ -245,8 +224,6 @@ hr {
 
 #section3 {
   
-  // padding-top:50px;
-
   background-color:$fs-white;
   text-align:center;
  
@@ -277,12 +254,9 @@ hr {
 
   position:relative;
 
-  // border:1px solid red;
   
   .v-align{
     padding:70px 0;
-    // @include vertical-align-mixin;
-    // border:1px solid red;
   }
 
 }
